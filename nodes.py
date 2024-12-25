@@ -30,14 +30,10 @@ class Qwen2_VQA:
                 "text": ("STRING", {"default": "", "multiline": True}),
                 "model": (
                     [
-                        "Qwen2-VL-2B-Instruct-GPTQ-Int4",
-                        "Qwen2-VL-2B-Instruct-GPTQ-Int8",
-                        "Qwen2-VL-2B-Instruct",
-                        "Qwen2-VL-7B-Instruct-GPTQ-Int4",
-                        "Qwen2-VL-7B-Instruct-GPTQ-Int8",
-                        "Qwen2-VL-7B-Instruct",
+                        "Qwen2-VL-2B-Instruct-abliterated",
+                        "Qwen2-VL-7B-Instruct-abliterated",
                     ],
-                    {"default": "Qwen2-VL-2B-Instruct"},
+                    {"default": "Qwen2-VL-7B-Instruct-abliterated"},
                 ),
                 "quantization": (
                     ["none", "4bit", "8bit"],
@@ -106,7 +102,7 @@ class Qwen2_VQA:
     ):
         if seed != -1:
             torch.manual_seed(seed)
-        model_id = f"qwen/{model}"
+        model_id = f"huihui-ai/{model}"
         self.model_checkpoint = os.path.join(
             folder_paths.models_dir, "prompt_generator", os.path.basename(model_id)
         )
