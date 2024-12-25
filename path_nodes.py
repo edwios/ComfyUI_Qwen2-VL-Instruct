@@ -40,7 +40,7 @@ with the **inputcount** and clicking update.
                     vr.append(frame)
             total_frames = len(vr) + 1
             print("Total frames:", total_frames)
-            avg_fps = vidObj.get_avg_fps()
+            avg_fps = vidObj.get(cv2.CAP_PROP_FPS)
             print("Get average FPS(frame per second):", avg_fps)
             duration = len(vr) / avg_fps
             print("Total duration:", duration, "seconds")
