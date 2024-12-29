@@ -1,11 +1,12 @@
-# ComfyUI_Qwen2-VL-Instruct with Apple Silicon support
+# ComfyUI_Qwen2-VL-Instruct (**Abliterated**) with Apple Silicon support
 
-This fork (from [71091a4](https://github.com/IuvenisSapiens/ComfyUI_Qwen2-VL-Instruct/commit/71091a4dbbefc76ef2059e0d99ee97c98e86e7ae)) incorporates the support of Apple Silicon (M1, M2, etc.) to ComfyUI_Qwen2-VL-Instruct.
+This **abliterated** fork (from [71091a4](https://github.com/IuvenisSapiens/ComfyUI_Qwen2-VL-Instruct/commit/71091a4dbbefc76ef2059e0d99ee97c98e86e7ae)) incorporates the support of Apple Silicon (M1, M2, etc.) to ComfyUI_Qwen2-VL-Instruct with an abliterated model `Qwen2-VL-7B-Instruct-abliterated`.
 
 Code tested on MacBook Pro M1 Max 64GB RAM with torch nightly build `torch-2.6.0.dev20241225` and Python 3.12.7. (I have not tested extensively on video, ymmv, fixes are welcome.)
 
 ### Major changes:
 
+- Use *Abliterated* model instead of the official one for better results (including of course NSFW content)
 - Added Image as input so you can use a **Load Image** or **Load Image List From Dir** node directly.
 - Replaced the unsupported decord (latest python version supported by eva-decord is 3.11<sup>§</sup>) with python-opencv.
 - Removed non-applicable `auto-gptq` module so setup would work without error.
@@ -37,7 +38,11 @@ git clone git@github.com:edwios/ComfyUI_Qwen2-VL-Instruct.git
 cd ComfyUI_Qwen2-VL-Instruct
 pip install -r requirements.txt
 ```
+
 **Restart ComfyUI** when installation is done and successful.
+
+When the node is invoked in a flow and if the model is not already downloaded, the correct *abliterated* model will be downloaded automatically and placed in the folder `ComfyUI/prompt_generator`.
+
 
 # Original README
 
