@@ -23,6 +23,21 @@ Code tested on MacBook Pro M1 Max 64GB RAM with torch nightly build `torch-2.6.0
 
     Setting the attention mode to "eager" solved the problem. If you are using torch 2.4 or below,the original "sdpa" would work just fine.
 
+## Installation
+
+If you have already have the original repository installed, remove it first.
+
+Either install from the ComfyUI Manager using *Install via Git URL* and enter the URL of this repository, or,
+
+Download or git clone this repository into the `ComfyUI/custom_nodes/` directory, then install the python packages in your ComfyUI Python environment:
+
+```bash
+cd ComfyUI/custom_nodes/
+git clone git@github.com:edwios/ComfyUI_Qwen2-VL-Instruct.git
+cd ComfyUI_Qwen2-VL-Instruct
+pip install -r requirements.txt
+```
+**Restart ComfyUI** when installation is done and successful.
 
 # Original README
 
